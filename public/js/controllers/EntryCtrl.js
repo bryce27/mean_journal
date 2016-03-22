@@ -13,6 +13,7 @@ angular.module('EntryCtrl', ['JournalService']).controller('EntryController', fu
       $scope.temp = weather.data.current_observation.temp_f;
   }
   $scope.shouldSaveWeather = false;
+  console.log('current entry', entry);
 
 
 	// FUNCTIONS

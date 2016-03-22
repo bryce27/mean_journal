@@ -1,15 +1,34 @@
 <div class="col-md-8" id="entry_area">
-	<div class="page-header">
-	  <h1>{{entry.title}}</h1>
+
+	<div class="panel panel-default" style="margin-top: 20px; padding-top: 0px">
+	  <div class="panel-heading">
+	  	<h3>{{entry.title}}<br /><small>{{entry.date}}</small></h3>
+	  </div>
+	  <div class="panel-body">
+
+	<p>{{ entry.content }}</p>
+	  </div>
 	</div>
 
-
-	<p>{{ entry.date }}</p>
-	<p>{{ entry.content }}</p>
+	
 </div>
 
-<div class="col-md-4" id="feature_area" style="height: 150px;">
-	<h3>Features</h3>
+
+
+<div class="col-md-4" id="feature_area">
+
+
+	<div class="panel panel-default" style="margin-top: 20px">
+	  <div class="panel-body" style="padding-top: 0px">
+	    	<h3 class="page-header">Things to remember about this day</h3>
+			<div id="weather">
+				<img src="{{entry.weather_icon}}" />
+				<span style="padding-left: 10px">{{entry.temp}} F</span>
+			</div>
+	  </div>
+	</div>
+
+	
 </div>
 
 

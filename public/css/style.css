@@ -3,12 +3,12 @@
 	background-color: black;
 	color: white;
 }*/
-#entry_area {
+/*#entry_area {
 	border: 2px solid gray;
-}
-#feature_area {
+}*/
+/*#feature_area {
 	border: 2px solid gray;
-}
+}*/
 .glyphicon-remove {
 	color: red;
 }
@@ -19,7 +19,9 @@
 	color: green;
 	cursor: pointer;
 }
-.
+p {
+  font-size: 1.3em;
+}
 
 /* NAVBAR ----------------------------- */
 
