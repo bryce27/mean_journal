@@ -8,12 +8,21 @@ angular.module('EntryCtrl', ['JournalService']).controller('EntryController', fu
 	// 	$scope.entry = entry;
 	// }
   $scope.entry = entry;
+  $scope.emotion = '';
+
   if (weather != undefined){
       $scope.weather_icon = weather.data.current_observation.icon_url;
       $scope.temp = weather.data.current_observation.temp_f;
   }
   $scope.shouldSaveWeather = false;
-  console.log('current entry', entry);
+
+  // FEATURE JQUERY ==================
+  $('.emoji').click(function(e){
+    $('.emoji').removeClass('lightblue');
+    $(this).toggleClass('lightblue');
+    $scope.emotion = $(this).attr('id');
+    console.log($scope.emotion)
+  })
 
 
 	// FUNCTIONS
@@ -33,7 +42,8 @@ angular.module('EntryCtrl', ['JournalService']).controller('EntryController', fu
             date: $scope.entry.date,
             content: $scope.entry.content,
             weather_icon: $scope.weather_icon,
-            temp: $scope.temp
+            temp: $scope.temp,
+            emotion: $scope.emotion
           });
 
         }
@@ -45,7 +55,8 @@ angular.module('EntryCtrl', ['JournalService']).controller('EntryController', fu
             date: $scope.entry.date,
             content: $scope.entry.content,
             weather_icon: null,
-            temp: null
+            temp: null,
+            emotion: $scope.emotion
           });
         }
 
