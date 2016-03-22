@@ -1,0 +1,21 @@
+<div class="col-md-6">
+
+	<div class="page-header">
+	  <h1>Journal Entries</h1>
+	</div>
+
+	<div class="list-group">
+		
+	  <a href="entries/{{entry._id}}" class="list-group-item" ng-repeat="entry in journalEntries">
+	  	<span style="float: right" ng-click="deleteEntry($index)" class='glyphicon glyphicon-remove'></span>
+	    <h4 class="list-group-item-heading">{{ entry.title }}</h4>
+
+	    <p class="list-group-item-text">{{entry.content}}</p>
+	<!--      <a ng-click="deleteEntry($index)"></a>
+	 -->
+	  </a>
+	</div>
+</div>
+
+
+<!-- <p ng-repeat="entry in journalEntries"><a ng-click="deleteEntry($index)" ><span class='glyphicon glyphicon-remove'></span></a><a href="entries/{{entry._id}}"> {{ entry.title }}</a></p> -->

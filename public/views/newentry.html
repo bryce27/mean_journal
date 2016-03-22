@@ -1,0 +1,52 @@
+<div class="col-md-8" id="entry_area">
+	<div class="page-header">
+	  <h1>{{entry.title}}</h1>
+	</div>
+
+
+	<div class="form-group">
+		<label for="title" class="col-md-2 control-label">
+			Title
+		</label>
+		<input type="text" class="form-control" name="title" autofocus
+		id="title" ng-model="entry.title">
+	</div>
+
+	<div class="form-group">
+		<label for="title" class="col-md-2 control-label">
+			Date
+		</label>
+		<input type="text" class="form-control" name="date" autofocus
+		id="date" ng-model="entry.date">
+	</div>
+
+	<div class="form-group">
+		<label for="content" class="col-md-2 control-label">
+			Content
+		</label>
+		<textarea class="form-control" name="content" rows="14" id="content" ng-model="entry.content"></textarea>
+	</div>
+
+	<button type="button" class="btn btn-primary" ng-click="addEntry()">Save</button>
+</div>
+
+<div class="col-md-4" id="feature_area" style="height: 150px;">
+	<h3>Features</h3>
+	<div id="weather">
+		<span ng-click="" class='glyphicon glyphicon-plus'></span>
+		<img src="{{weather_icon}}" />
+		<span style="padding-left: 10px">{{temp}} F</span>
+
+
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+

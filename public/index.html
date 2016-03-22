@@ -1,45 +1,83 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<base href="/">
 
-	<title>Starter Node and Angular</title>
+	<title>My Journal</title>
+
+	<!-- JS -->
+	<script src="libs/jquery/dist/jquery.min.js"></script>
+	<script src="libs/bootstrap/dist/js/bootstrap.min.js"></script>
 
 	<!-- CSS -->
 	<link rel="stylesheet" href="libs/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="libs/summernote/dist/summernote.css">
 	<link rel="stylesheet" href="css/style.css"> <!-- custom styles -->
 
-	<!-- JS -->
+	<!-- ANGULAR -->
 	<script src="libs/angular/angular.min.js"></script>
 	<script src="libs/angular-route/angular-route.min.js"></script>
 
 	<!-- ANGULAR CUSTOM -->
-	<script src="js/controllers/MainCtrl.js"></script>
-	<script src="js/controllers/NerdCtrl.js"></script>
-	<script src="js/services/NerdService.js"></script>
-	<script src="js/controllers/GeekCtrl.js"></script>
-	<script src="js/services/GeekService.js"></script>
+	<script src="js/controllers/JournalCtrl.js"></script>
+	<script src="js/controllers/EntryCtrl.js"></script>
+	<script src="js/services/JournalService.js"></script>
+	<script src="js/controllers/SideNavCtrl.js"></script>
+	<script src="js/controllers/FeatureCtrl.js"></script>
+	<script src="js/services/FeatureService.js"></script>
 	<script src="js/appRoutes.js"></script>
 	<script src="js/app.js"></script>
+	<script src="js/custom/js.js"></script>
 </head>
-<body ng-app="sampleApp" ng-controller="NerdController">
-<div class="container">
-	
-	<!-- HEADER -->
-	<nav class="navbar navbar-inverse">
-		<div class="navbar-header">
-			<a class="navbar-brand" href="/">Stencil: Node and Angular</a>
+
+<body ng-app="sampleApp">
+
+
+
+
+
+
+<!-- 		<div class="col-md-1" id="side_nav" style="height: 150px;">
+			<h3>Side Nav</h3>
+			<p><a href="/newentry">New Entry</a><p>
+			<p><a href="/">See All</a></p>
+		</div> -->
+
+		<nav class='sidebar sidebar-menu-collapsed'>
+		    <a href='#' id='justify-icon'>
+		      <span class='glyphicon glyphicon-align-justify'></span>
+		    </a>
+		    <ul>
+		      <li class=''>
+		        <a class='expandable' href='/newentry' title='New'>
+		          <span class='glyphicon glyphicon-plus collapsed-element'></span>
+		          <span class='expanded-element'>New Entry</span>
+		        </a>
+		      </li>
+		      <li class="">
+		        <a class='expandable' href='/' title='All'>
+		          <span class='glyphicon glyphicon-th-list collapsed-element'></span>
+		          <span class='expanded-element'>All Entries</span>
+		        </a>
+		      </li>
+		      
+		 </nav>
+		 <!-- http://codepen.io/goodywebs/pen/ouhiH/ -->
+
+		 <div id="main" style="margin-left: 70px; margin-right: 20px; z-index: -1">
+
+		 	<div class="row">
+
+
+		 		<div ng-view></div>
+
+
+			</div>
+
 		</div>
-		<ul class="nav navbar-nav">
-			<li><a href="/nerds">Nerds</a></li>
-			<li><a href="/geeks">Geeks</a></li>
-		</ul>
-	</nav>
-
-	<!-- ANGULAR DYNAMIC CONTENT -->
-	<div ng-view></div>
-
-</div>
+	              
+	
 </body>
+
 </html>
