@@ -55,15 +55,24 @@ angular.module('EntryCtrl', ['JournalService']).controller('EntryController', fu
         $location.path('/');
     }
 
-    function addWeather(){
-      $scope.shouldSaveWeather = true;
-      // change plus to a checkmark to signify that you added it
+    function toggleWeather(){
+      if ($scope.shouldSaveWeather == false){
+          $scope.shouldSaveWeather = true;
+          $('#weather .glyphicon-plus').addClass('glyphicon-ok');
+          $('#weather .glyphicon-plus').removeClass('glyphicon-plus');
+      }
+      else {
+          $scope.shouldSaveWeather = false;
+          $('#weather .glyphicon-ok').addClass('glyphicon-plus');
+          $('#weather .glyphicon-ok').removeClass('glyphicon-ok');
+      }
     }
 
 
     // BIND TO SCOPE
 
     $scope.addEntry = addEntry;
+    $scope.toggleWeather = toggleWeather;
 
 
 });

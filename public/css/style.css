@@ -15,10 +15,11 @@
 .glyphicon-remove:hover {
 	cursor: pointer;
 }
-#weather .glyphicon-plus {
+#weather .glyphicon-plus, .glyphicon-ok {
 	color: green;
 	cursor: pointer;
 }
+.
 
 /* NAVBAR ----------------------------- */
 
