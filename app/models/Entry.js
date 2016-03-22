@@ -16,7 +16,8 @@ var EntrySchema = new mongoose.Schema({
 	content: String,
 	weather_icon: String,
 	temp: String,
-	emotion: String
+	emotion: String,
+	pic: String
 });
 
 mongoose.model('Entry', EntrySchema);

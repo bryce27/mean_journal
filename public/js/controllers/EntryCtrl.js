@@ -9,6 +9,7 @@ angular.module('EntryCtrl', ['JournalService']).controller('EntryController', fu
 	// }
   $scope.entry = entry;
   $scope.emotion = '';
+  $scope.pic = '';
 
   if (weather != undefined){
       $scope.weather_icon = weather.data.current_observation.icon_url;
@@ -43,7 +44,8 @@ angular.module('EntryCtrl', ['JournalService']).controller('EntryController', fu
             content: $scope.entry.content,
             weather_icon: $scope.weather_icon,
             temp: $scope.temp,
-            emotion: $scope.emotion
+            emotion: $scope.emotion,
+            pic: $scope.pic
           });
 
         }
@@ -56,7 +58,8 @@ angular.module('EntryCtrl', ['JournalService']).controller('EntryController', fu
             content: $scope.entry.content,
             weather_icon: null,
             temp: null,
-            emotion: $scope.emotion
+            emotion: $scope.emotion,
+            pic: $scope.pic
           });
         }
 

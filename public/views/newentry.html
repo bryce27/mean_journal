@@ -32,16 +32,20 @@
 
 <div class="col-md-4" id="feature_area" style="margin-top: 80px">
 	<h3>Things to remember about today <br /><small> (click to add to your entry)</small></h3>
-	{{emotion}}
-	<div id="weather">
+	<div id="weather" style="margin-top: 20px">
 		<span ng-click="toggleWeather()" class='glyphicon glyphicon-plus'></span>
 		<img src="{{weather_icon}}" />
 		<span style="padding-left: 10px">{{temp}} F</span>
 	</div>
-	<div id="mood">
+	<div id="mood" style="margin-top: 20px; margin-bottom: 20px">
 		<img class="emoji" id="happy" src="img/happy.png" style="max-width: 90px;"/>
 		<img class="emoji" id="sad" src="img/sad.png" style="max-width: 90px"/>
 		<img class="emoji" id="ok" src="img/ok.png" style="max-width: 90px"/>
+	</div>
+	<div id="pic">
+		<label>Paste an image url to add a picture</label>
+		<input type="text" class="form-control" id="pic" ng-model="pic" style="max-width: 300px; margin-bottom: 20px">
+		<img src="{{pic}}" style="max-width: 200px" />
 	</div>
 </div>
 

@@ -21,12 +21,15 @@
 	<div class="panel panel-default" style="margin-top: 20px">
 	  <div class="panel-body" style="padding-top: 0px">
 	    	<h3 class="page-header">Things to remember about this day</h3>
-			<div id="weather" ng-show="entry.temp">
+			<div id="weather" ng-show="entry.temp" style="margin-top: 20px">
 				<img src="{{entry.weather_icon}}" />
 				<span style="padding-left: 10px">{{entry.temp}} F</span>
 			</div>
-			<div id="mood" ng-show="entry.emotion">
+			<div id="mood" ng-show="entry.emotion" style="margin-top: 20px; margin-bottom: 20px">
 				<img src="img/{{entry.emotion}}.png" style="max-width: 90px"/>
+			</div>
+			<div id="pic" style="margin-top: 20px">
+				<img src="{{entry.pic}}" style="max-width: 200px" />
 			</div>
 	  </div>
 	</div>
