@@ -10,7 +10,7 @@
 	  	<span style="float: right" ng-click="deleteEntry($index)" class='glyphicon glyphicon-remove'></span>
 	    <h4 class="list-group-item-heading">{{ entry.title }}</h4>
 
-	    <p class="list-group-item-text">{{entry.content}}</p>
+	    <p class="list-group-item-text">{{entry.content | limitTo:300}} </p>
 	<!--      <a ng-click="deleteEntry($index)"></a>
 	 -->
 	  </a>

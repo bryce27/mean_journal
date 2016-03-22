@@ -15,7 +15,7 @@
 
 
 
-<div class="col-md-4" id="feature_area">
+<div class="col-md-4" id="feature_area" ng-show="(entry.temp || entry.emotion)">
 
 
 	<div class="panel panel-default" style="margin-top: 20px">
@@ -25,7 +25,7 @@
 				<img src="{{entry.weather_icon}}" />
 				<span style="padding-left: 10px">{{entry.temp}} F</span>
 			</div>
-			<div id="mood">
+			<div id="mood" ng-show="entry.emotion">
 				<img src="img/{{entry.emotion}}.png" style="max-width: 90px"/>
 			</div>
 	  </div>
