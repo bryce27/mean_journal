@@ -42,6 +42,7 @@ angular.module('EntryCtrl', ['JournalService']).controller('EntryController', fu
             title: $scope.entry.title,
             date: $scope.entry.date,
             content: $scope.entry.content,
+            location: $scope.entry.location,
             weather_icon: $scope.weather_icon,
             temp: $scope.temp,
             emotion: $scope.emotion,
@@ -56,6 +57,7 @@ angular.module('EntryCtrl', ['JournalService']).controller('EntryController', fu
             title: $scope.entry.title,
             date: $scope.entry.date,
             content: $scope.entry.content,
+            location: $scope.entry.location,
             weather_icon: null,
             temp: null,
             emotion: $scope.emotion,
@@ -65,6 +67,7 @@ angular.module('EntryCtrl', ['JournalService']).controller('EntryController', fu
 
         $scope.entry.title = "";
         $scope.entry.content = "";
+        $scope.entry.location = "";
         $scope.entry.date = "";
 
         $location.path('/');

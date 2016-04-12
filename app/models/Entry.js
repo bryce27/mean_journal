@@ -14,6 +14,7 @@ var EntrySchema = new mongoose.Schema({
 	title: String,
 	date: String,
 	content: String,
+	location: String,
 	weather_icon: String,
 	temp: String,
 	emotion: String,

@@ -23,7 +23,7 @@ p {
   font-size: 1.3em;
 }
 .lightblue {
-  background-color: lightblue;
+  background-color: #e67300;
 }
 
 /* NAVBAR ----------------------------- */
@@ -45,7 +45,7 @@ nav.sidebar {
   top: 0px;
   left: 0px;
   height: 100%;
-  background: none repeat scroll 0 0 #0099ff;
+  background: none repeat scroll 0 0 #e67300;
   color: white;
   padding: 20px 10px;
   z-index: 1;

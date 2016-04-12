@@ -1,5 +1,5 @@
-<div class="col-md-8" id="entry_area">
-	<div class="page-header">
+<div class="col-md-8" id="entry_area" style="background: black; color: white; border: 10px ridge #e67300">
+	<div class="page-header" >
 	  <h1>{{entry.title}}</h1>
 	</div>
 
@@ -22,25 +22,36 @@
 
 	<div class="form-group">
 		<label for="content" class="col-md-2 control-label">
-			Content
+			Description
 		</label>
-		<textarea class="form-control" name="content" rows="14" id="content" ng-model="entry.content"></textarea>
+		<textarea class="form-control" name="content" rows="3" id="content" ng-model="entry.content">
+		</textarea>
 	</div>
 
-	<button type="button" class="btn btn-primary" ng-click="addEntry()">Save</button>
+	<div class="form-group">
+		<label for="location" class="col-md-2 control-label">
+			Location
+		</label>
+		<textarea class="form-control" name="location" rows="1" id="location" ng-model="entry.location">
+		</textarea>
+	</div>
+
+	<button type="button" class="btn btn-primary" ng-click="addEntry()">Save Workout</button>
 </div>
 
 <div class="col-md-4" id="feature_area" style="margin-top: 80px">
-	<h3>Things to remember about today <br /><small> (click to add to your entry)</small></h3>
+	<h3>Additional Info<br /><small> (click to add to your entry)</small></h3>
+<!--
 	<div id="weather" style="margin-top: 20px">
 		<span ng-click="toggleWeather()" class='glyphicon glyphicon-plus'></span>
 		<img src="{{weather_icon}}" />
 		<span style="padding-left: 10px">{{temp}} F</span>
 	</div>
+-->
 	<div id="mood" style="margin-top: 20px; margin-bottom: 20px">
-		<img class="emoji" id="happy" src="img/happy.png" style="max-width: 90px;"/>
-		<img class="emoji" id="sad" src="img/sad.png" style="max-width: 90px"/>
-		<img class="emoji" id="ok" src="img/ok.png" style="max-width: 90px"/>
+		<img class="emoji" id="workout" src="img/workout.png" style="max-width: 90px;"/>
+		<img class="emoji" id="running" src="img/running.png" style="max-width: 90px"/>
+		<img class="emoji" id="biking" src="img/biking.png" style="max-width: 90px"/>
 	</div>
 	<div id="pic">
 		<label>Paste an image url to add a picture</label>

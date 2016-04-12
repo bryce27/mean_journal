@@ -31,7 +31,7 @@ angular.module('appRoutes', ['JournalService']).config(['$routeProvider', '$loca
 			controller: 'EntryController',
 			resolve: {
 			    entry: function($route, Journal) {
-			      return {title: 'My Great Day', date: new Date().toDateString(), content: "Man. I just had a bucket of fun today, like."};
+			      return {title: 'Afternoon Run', date: new Date().toDateString(), content: "13 miles, 5:00 min/mile avg", location: "Squaw Peak"};
 			    },
 			    weather: function(Journal){
 			    	return Journal.getWeather();

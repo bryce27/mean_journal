@@ -1,4 +1,4 @@
-<div class="col-md-8" id="entry_area">
+<div class="col-md-8" id="entry_area" style="background: black;  border: 10px ridge #e67300">
 
 	<div class="panel panel-default" style="margin-top: 20px; padding-top: 0px">
 	  <div class="panel-heading">
@@ -7,24 +7,32 @@
 	  <div class="panel-body">
 
 	<p>{{ entry.content }}</p>
-	  </div>
-	</div>
+	<p>{{ entry.location }}</p>
+
+
 
 	
 </div>
 
-
+<!--
+<div class="col-md-8" id="entry_area">
+	<div id="location" ng-show="entry.location" style="">
+				<span style="">{{entry.location}} Test</span>
+			</div>
+</div>
+-->
 
 <div class="col-md-4" id="feature_area" ng-show="(entry.temp || entry.emotion)">
 
 
 	<div class="panel panel-default" style="margin-top: 20px">
 	  <div class="panel-body" style="padding-top: 0px">
-	    	<h3 class="page-header">Things to remember about this day</h3>
+	    	<h3 class="page-header">Additional Info</h3>
 			<div id="weather" ng-show="entry.temp" style="margin-top: 20px">
 				<img src="{{entry.weather_icon}}" />
 				<span style="padding-left: 10px">{{entry.temp}} F</span>
 			</div>
+			
 			<div id="mood" ng-show="entry.emotion" style="margin-top: 20px; margin-bottom: 20px">
 				<img src="img/{{entry.emotion}}.png" style="max-width: 90px"/>
 			</div>

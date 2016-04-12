@@ -1,16 +1,18 @@
-<div class="col-md-6">
+<div class="col-md-6" style="background: black; color: white; border: 10px ridge #e67300">
 
 	<div class="page-header">
-	  <h1>Journal Entries</h1>
+	  <h1>Workouts</h1>
 	</div>
 
 	<div class="list-group">
 		
 	  <a href="entries/{{entry._id}}" class="list-group-item" ng-repeat="entry in journalEntries">
 	  	<span style="float: right" ng-click="deleteEntry($index)" class='glyphicon glyphicon-remove'></span>
-	    <h4 class="list-group-item-heading">{{ entry.title }}</h4>
+	    <h3 class="list-group-item-heading">{{ entry.title }}</h3>
+	    <h4 class="list-group-item-heading">{{ entry.date }}</h4>
+	    <h4 class="list-group-item-heading">{{ entry.location }}</h4>
+	    <p class="list-group-item-text">{{entry.content | limitTo:300}}</p>
 
-	    <p class="list-group-item-text">{{entry.content | limitTo:300}} </p>
 	<!--      <a ng-click="deleteEntry($index)"></a>
 	 -->
 	  </a>
